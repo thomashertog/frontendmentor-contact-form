@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Contact form</title>
 
@@ -20,36 +21,68 @@
 
 <body>
   <main>
-    <form action="/">
-      Contact Us
+    <h1>Contact Us</h1>
 
-      First Name
-      This field is required
+    <form action="/"></form>
 
-      Last Name
-      This field is required
+    <div class="form-group">
+      <label for="first-name">First Name <span aria-hidden="true">*</span></label>
+      <input type="text" name="first-name" id="first-name" required aria-invalid="false" autocomplete="given-name"
+        aria-describedby="first-name-required">
+      <p id="first-name-required">This field is required</p>
+    </div>
 
-      Email Address
-      Please enter a valid email address
-      This field is required
+    <div class="form-group">
+      <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
+      <input type="text" name="last-name" id="last-name" required aria-invalid="false" autocomplete="family-name"
+        aria-describedby="last-name-required">
+      <p id="last-name-required">This field is required</p>
+    </div>
 
-      Query Type
-      General Enquiry
-      Support Request
-      Please select a query type
+    <div class="form-group">
+      <label for="email">Email Address <span aria-hidden="true">*</span></label>
+      <input type="email" name="email" id="email" required aria-invalid="false" autocomplete="email"
+        aria-describedby="email-required valid-email">
+      <p id="valid-email">Please enter a valid email address</p>
+      <p id="email-required">This field is required</p>
+    </div>
 
-      Message
-      This field is required
+    <fieldset aria-required="true" aria-invalid="false" role="radiogroup" aria-describedby="query-type-required">
+      <legend>Query Type</legend>
+      <div class="form-group">
+        <label for="general-enquiry">General Enquiry</label>
+        <input type="radio" name="query-type" id="general-enquiry" value="General Enquiry">
+      </div>
+      <div class="form-group">
+        <label for="support-request">Support Request</label>
+        <input type="radio" name="query-type" id="support-request" value="Support Request">
+      </div>
+      <p id="query-type-required">Please select a query type</p>
+    </fieldset>
 
-      I consent to being contacted by the team
-      To submit this form, please consent to being contacted
+    <div class="form-group">
+      <label for="message">Message <span aria-hidden="true">*</span></label>
+      <textarea name="message" id="message" rows="5" required aria-invalid="false"
+        aria-describedby="message-required"></textarea>
+      <p id="message-required">This field is required</p>
+    </div>
 
-      Submit
+    <div class="form-group">
+      <input type="checkbox" name="consent" id="consent" required aria-invalid="false"
+        aria-describedby="consent-required">
+      <label for="consent">I consent to being contacted by the team</label>
+      <p id="consent-required">To submit this form, please consent to being contacted</p>
+    </div>
 
-      Message Sent!
-      Thanks for completing the form. We'll be in touch soon!
-
+    <button type="submit">Submit</button>
     </form>
+    <dialog id="success-dialog" aria-labelledby="dialog-title">
+      <p class="dialog-title">
+        <img src="assets/images/icon-success-check.svg" alt="" aria-hidden="true">
+        Message Sent!
+      </p>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </dialog>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
