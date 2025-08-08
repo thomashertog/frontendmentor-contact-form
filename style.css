@@ -56,8 +56,12 @@ label{
     line-height: 1;
 
     span {
-    color: var(--green-600)
+    color: var(--green-600);
+    }   
 }
+
+input + label{
+    cursor: pointer;
 }
 
 :is(input, textarea):not(:user-invalid)~p,
@@ -87,6 +91,11 @@ button{
     color: var(--white);
     border: none;
     border-radius: .5em;
+
+    &:hover, &:focus-visible{
+        background-color: var(--grey-900);
+        cursor: pointer;
+    }
 }
 
 .form-group {
@@ -95,6 +104,11 @@ button{
     &:has(> input[type="checkbox"], > input[type="radio"]) {
         grid-template-columns: auto 1fr;
         align-items: center;
+    }
+
+    &:has(> [type="radio"]):focus-within{
+        background-color: var(--green-200);
+        cursor: pointer;
     }
 
     &:has(> .form-group){
@@ -115,6 +129,12 @@ button{
 input, textarea {
     padding: .5em;
     border: var(--border);
+    &:is(&:hover, &:focus-visible){
+        border-color: var(--green-600);
+        outline: none;
+        cursor: pointer;
+    }
+    
     &:not([type="checkbox"]){border-radius: .5em;}
     &:is([type="radio"], [type="checkbox"]) {
         margin: 0;
