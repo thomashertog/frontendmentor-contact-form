@@ -69,6 +69,11 @@ input + label{
     display: none;
 }
 
+[aria-invalid] p,
+[aria-invalid] ~ p{
+    color: var(--red);
+}
+
 .card {
     padding-inline: clamp(1.5rem, 5vw, 2.5rem);
     padding-block: 1rem;
