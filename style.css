@@ -51,7 +51,13 @@ form{
 }
 
 label{
+    flex-grow: 1;
+
     line-height: 1;
+
+    span {
+    color: var(--green-600)
+}
 }
 
 :is(input, textarea):not(:user-invalid)~p,
@@ -97,10 +103,6 @@ button{
             grid-column: 1/-1;
         }
     }
-}
-
-label span {
-    color: var(--green-600)
 }
 
 input, textarea {
