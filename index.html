@@ -21,34 +21,31 @@
 </head>
 
 <body>
-  <main>
+  <main class="card">
     <h1>Contact Us</h1>
 
     <form action="/"></form>
 
     <div class="form-group">
       <label for="first-name">First Name <span aria-hidden="true">*</span></label>
-      <input type="text" name="first-name" id="first-name" required aria-invalid="false" autocomplete="given-name"
-        aria-describedby="first-name-required">
+      <input type="text" name="first-name" id="first-name" required aria-invalid="false" autocomplete="given-name">
       <p id="first-name-required">This field is required</p>
     </div>
 
     <div class="form-group">
       <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
-      <input type="text" name="last-name" id="last-name" required aria-invalid="false" autocomplete="family-name"
-        aria-describedby="last-name-required">
+      <input type="text" name="last-name" id="last-name" required aria-invalid="false" autocomplete="family-name">
       <p id="last-name-required">This field is required</p>
     </div>
 
     <div class="form-group">
       <label for="email">Email Address <span aria-hidden="true">*</span></label>
-      <input type="email" name="email" id="email" required aria-invalid="false" autocomplete="email"
-        aria-describedby="email-required valid-email">
+      <input type="email" name="email" id="email" required aria-invalid="false" autocomplete="email">
       <p id="valid-email">Please enter a valid email address</p>
       <p id="email-required">This field is required</p>
     </div>
 
-    <fieldset aria-required="true" aria-invalid="false" role="radiogroup" aria-describedby="query-type-required">
+    <fieldset aria-required="true" aria-invalid="false" role="radiogroup">
       <legend>Query Type</legend>
       <div class="form-group">
         <label for="general-enquiry">General Enquiry</label>
@@ -63,14 +60,12 @@
 
     <div class="form-group">
       <label for="message">Message <span aria-hidden="true">*</span></label>
-      <textarea name="message" id="message" rows="5" required aria-invalid="false"
-        aria-describedby="message-required"></textarea>
+      <textarea name="message" id="message" rows="5" required aria-invalid="false"></textarea>
       <p id="message-required">This field is required</p>
     </div>
 
     <div class="form-group">
-      <input type="checkbox" name="consent" id="consent" required aria-invalid="false"
-        aria-describedby="consent-required">
+      <input type="checkbox" name="consent" id="consent" required aria-invalid="false">
       <label for="consent">I consent to being contacted by the team</label>
       <p id="consent-required">To submit this form, please consent to being contacted</p>
     </div>
