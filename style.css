@@ -39,9 +39,20 @@ body {
     color: var(--grey-900);
     background-color: var(--green-200);
     accent-color: var(--green-600);
+    display: grid;
+    place-items: center;
 }
 
 :is(input, textarea):not(:user-invalid) ~ p,
 [role="radiogroup"]:not(:user-invalid) > p {
     display: none;
+}
+
+.card{
+    padding-inline: clamp(1.5rem, 5vw, 2.5rem);
+    padding-block: 1rem;
+    inline-size: min(90vw, 46rem);
+    
+    background-color: white;
+    border-radius: 1rem;
 }
