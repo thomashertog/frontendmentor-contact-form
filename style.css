@@ -97,6 +97,13 @@ button{
         align-items: center;
     }
 
+    &:has(> .form-group){
+        @media screen and (min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+    }
+
     &.consent{
         margin-block: 2rem;
         & p{
