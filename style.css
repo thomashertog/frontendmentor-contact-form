@@ -78,6 +78,7 @@ input + label{
     padding-inline: clamp(1.5rem, 5vw, 2.5rem);
     padding-block: 1rem;
     inline-size: min(90vw, 46rem);
+    margin-block-end: 3rem;
 
     background-color: white;
     border-radius: 1rem;
