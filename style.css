@@ -136,11 +136,13 @@ input, textarea {
 fieldset {
     border: none;
     padding: 0;
-    display: grid;
-    gap: 1em;
     
     & legend{
         margin-block-end: .5em;
+    }
+
+    & .form-group:has(.form-group){
+        gap: 1rem;
     }
 
     & .form-group:not(:has(.form-group)) {
