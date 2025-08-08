@@ -69,9 +69,11 @@ input + label{
     display: none;
 }
 
-[aria-invalid] p,
-[aria-invalid] ~ p{
+:user-invalid {
+    border-color: var(--red);
+    :is(& p, & ~ p){
     color: var(--red);
+}
 }
 
 .card {
@@ -118,6 +120,7 @@ button{
     }
 
     &:has(> .form-group){
+        align-items: start;
         @media screen and (min-width: 600px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
