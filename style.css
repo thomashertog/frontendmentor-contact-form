@@ -65,11 +65,11 @@ input + label{
 }
 
 :is(input, textarea):not(:user-invalid)~p,
-[role="radiogroup"]:not(:user-invalid) p {
+[role="radiogroup"]:not([aria-invalid=true]) p {
     display: none;
 }
 
-:user-invalid {
+:is(:user-invalid, [aria-invalid=true]) {
     border-color: var(--red);
     :is(& p, & ~ p){
     color: var(--red);
