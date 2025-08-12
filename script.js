@@ -3,7 +3,9 @@ document.querySelector('form').addEventListener('submit', function(event){
 
     updateValidity();
     if(event.target.checkValidity()) {
-        document.getElementById('success-dialog').show();
+        const dialog = document.getElementById('success-dialog');
+        dialog.show();
+        setTimeout(() => dialog.close(), 5000);
     }
 });
 
