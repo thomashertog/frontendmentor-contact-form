@@ -185,3 +185,21 @@ fieldset {
 
     }
 }
+
+dialog{
+    display: grid;
+    gap: .5rem;
+    position: absolute;
+    inset-block-start: 1rem;
+    
+    background-color: var(--grey-900);
+    color: var(--green-200);
+    border: none;
+    border-radius: .5rem;
+}
+
+.dialog-title{
+    display: flex;
+    font-weight: bold;
+    gap: .5em;
+}
