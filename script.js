@@ -1,7 +1,8 @@
 document.querySelector('form').addEventListener('submit', function(event){
     event.preventDefault();
 
-    updateValidity();
+    updateEmailValidity();
+    updateRadioValidity();
     if(event.target.checkValidity()) {
         const dialog = document.getElementById('success-dialog');
         dialog.show();
@@ -9,7 +10,12 @@ document.querySelector('form').addEventListener('submit', function(event){
     }
 });
 
-function updateValidity() {
+document.getElementById('email').addEventListener('change', updateEmailValidity);
+document.querySelectorAll('[role="radiogroup"] input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', updateRadioValidity);
+});
+
+function updateEmailValidity() {
     const emailInput = document.getElementById('email');
     const emailRequired = document.getElementById('email-required');
     const emailInvalid = document.getElementById('email-invalid');
@@ -23,7 +29,9 @@ function updateValidity() {
             emailRequired.classList.add('sr-only');
         }            
     }
+}
 
+function updateRadioValidity() {
     const radiobuttons = document.querySelector('[role="radiogroup"]');
     if(![...radiobuttons.elements].some(radio => radio.checked)) {
         radiobuttons.ariaInvalid = 'true';
