@@ -60,7 +60,7 @@ input + label{
     cursor: pointer;
 }
 
-:is(input, textarea):not(:user-invalid)~p,
+:is(input, textarea):not([aria-invalid=true])~p,
 [role="radiogroup"]:not([aria-invalid=true]) p {
     display: none;
 }
