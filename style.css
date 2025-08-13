@@ -118,7 +118,7 @@ button{
 
     &:has(> .form-group){
         align-items: start;
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 37.5rem) {
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
         }
