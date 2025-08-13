@@ -1,6 +1,6 @@
 document.querySelector('form').addEventListener('submit', function(event){
     event.preventDefault();
-
+    updateTextValidity();
     updateEmailValidity();
     updateRadioValidity();
     if(event.target.checkValidity()) {
@@ -41,5 +41,24 @@ function updateRadioValidity() {
         radiobuttons.ariaInvalid = 'false';
         radiobuttons.validity.valueMissing = false;
         radiobuttons.validity.valid = true;
+    }
+}
+
+function updateTextValidity(){
+    const firstName = document.getElementById('first-name');
+    const lastName = document.getElementById('last-name');
+    const message = document.getElementById('message');
+
+    if(firstName.value.trim() === ''){
+        firstName.validity.valueMissing = true;
+        firstName.validity.valid = false;
+    }
+    if(lastName.value.trim() === ''){
+        lastName.validity.valueMissing = true;
+        lastName.validity.valid = false;
+    }
+    if(message.value.trim() === ''){
+        message.validity.valueMissing = true;
+        message.validity.valid = false;
     }
 }
